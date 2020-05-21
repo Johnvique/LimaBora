@@ -35,26 +35,26 @@
               <form class="user">
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="First Name">
+                    <input type="text" name="username" class="form-control form-control-user" id="exampleUserName" placeholder="Username" required>
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Last Name">
+                    <input type="text" name="phone" class="form-control form-control-user" id="examplePhoneNumber" placeholder="Phone Number" required>
                   </div>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+                    <input type="text" name="location" class="form-control form-control-user" id="exampleLocation" placeholder="Location" required>
                   </div>
                   <div class="col-sm-6">
-                    <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+                    <input type="text" name="ID_No" class="form-control form-control-user" id="exampleIDnumber" placeholder="ID Number" required>
                   </div>
                 </div>
-                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                  Register Account
-                </a>
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-user btn-block">
+                  Register Fertilizer
+                </button>
               </form>
             </div>
           </div>
@@ -76,40 +76,34 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                      <th>#</th>
+                      <th>Username</th>
+                      <th>Phone Number</th>
+                      <th>Location</th>
+                      <th>ID Number</th>
+                      <th>Email</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
-                      <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                      <th>#</th>
+                      <th>Username</th>
+                      <th>Phone Number</th>
+                      <th>Location</th>
+                      <th>ID Number</th>
+                      <th>Email</th>
+                      <th>Action</th>
                     </tr>
                   </tfoot>
                   <tbody>
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011/04/25</td>
-                      <td>$320,800</td>
-                    </tr>
-                    <tr>
-                      <td>Donna Snider</td>
-                      <td>Customer Support</td>
-                      <td>New York</td>
-                      <td>27</td>
-                      <td>2011/01/25</td>
-                      <td>$112,000</td>
+                      <td>Dolly Dolphine</td>
+                      <td>+25471234567</td>
+                      <td>Migori County</td>
+                      <td>12345678</td>
+                      <td>dolly@mail.com</td>
+                      <td>action</td>
                     </tr>
                   </tbody>
                 </table>

@@ -25,9 +25,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/Admin/Diseases/view_diseases', function () {
         return view('Admin/Diseases/view_diseases');
     });
-    Route::get('/Admin/Farmers/view_farmers', function () {
-        return view('Admin/Farmers/view_farmers');
-    });
+    Route::get('/Admin/Farmers/view_farmers', 'FarmersController@index');
+
     Route::get('/Admin/Farms/view_farms', function () {
         return view('Admin/Farms/view_farms');
     });
@@ -57,3 +56,14 @@ Route::group(['middleware' => ['auth']], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('Customers/view_customers', 'CustomersController');
+Route::resource('Diseases/view_diseases', 'DiseasesController');
+Route::resource('Farmers/view_farmers', 'FarmersController');
+Route::resource('Farms/view_farms', 'FarmsController');
+Route::resource('Fertilizers/view_fertilizers', 'FertilizersController');
+Route::resource('Permissions/view_permissions', 'PermissionsController');
+Route::resource('Plants/view_plants', 'PlantsController');
+Route::resource('Roles/user_roles', 'RolesController');
+Route::resource('Settings/system_settings', 'SettingsController');
+Route::resource('Tools/view_tools', 'ToolsController');
+Route::resource('Treatments/view_treatments', 'TreatmentsController');

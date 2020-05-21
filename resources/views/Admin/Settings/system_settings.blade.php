@@ -20,7 +20,30 @@
         <div class="modal-body">
           <div class="card">
             <div class="card-body">
-                Form Goes Here
+              <form class="user">
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" name="username" class="form-control form-control-user" id="exampleUserName" placeholder="Username" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" name="phone" class="form-control form-control-user" id="examplePhoneNumber" placeholder="Phone Number" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" name="location" class="form-control form-control-user" id="exampleLocation" placeholder="Location" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="text" name="ID_No" class="form-control form-control-user" id="exampleIDnumber" placeholder="ID Number" required>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address" required>
+                </div>
+                <button type="submit" class="btn btn-success btn-user btn-block">
+                  Submit Settings
+                </button>
+              </form>
             </div>
           </div>
         </div>
