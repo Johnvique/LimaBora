@@ -32,25 +32,46 @@
         <div class="modal-body">
           <div class="card">
             <div class="card-body">
-              <form class="user">
+            <form action="{{route('view_plants.store')}}" class="user" method="POST" enctype="multipart/form-data">
+              @csrf
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" name="username" class="form-control form-control-user" id="exampleUserName" placeholder="Username" required>
+                    <input type="text" name="name" class="form-control form-control-user" id="exampleName" placeholder="Plants Name" required>
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="phone" class="form-control form-control-user" id="examplePhoneNumber" placeholder="Phone Number" required>
+                    <input type="text" name="scientific_name" class="form-control form-control-user" id="exampleScientificName" placeholder="Scientific Name" required>
                   </div>
                 </div>
                 <div class="form-group row">
                   <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="text" name="location" class="form-control form-control-user" id="exampleLocation" placeholder="Location" required>
+                    <select type="classification" name="classification" value="--chose classification--" class="form-control-user" id="exampleInputClassification" required>
+                      <option value="" selected>---select Classification---</option>
+                      <option value="crop">crop</option>
+                      <option value="cereal">cereal</option>
+                      <option value="legume">legume</option>
+                      <option value="fruit">fruit</option>
+                      <option value="vegetable">vegetable</option>
+                    </select>
                   </div>
                   <div class="col-sm-6">
-                    <input type="text" name="ID_No" class="form-control form-control-user" id="exampleIDnumber" placeholder="ID Number" required>
+                    <input type="text" name="source" class="form-control form-control-user" id="exampleSource" placeholder="Plant Source" required>
                   </div>
                 </div>
-                <div class="form-group">
-                  <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address" required>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" name="family" class="form-control form-control-user" id="exampleFamily" placeholder="Plant Family" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="price" name="price" class="form-control form-control-user" id="examplePrice" placeholder="Charged Prices" required>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="form-group">
+                    <input type="textarea" name="benefits" class="form-control form-control-user" id="exampleInputBenefits" placeholder="Benefits" required>
+                  </div>
+                  <div class="form-group">
+                    <input type="file" name="image" class="form-control form-control-user" id="exampleInputBenefits" placeholder="plants image" onchange="return imageval()" required>
+                  </div>
                 </div>
                 <button type="submit" class="btn btn-success btn-user btn-block">
                   Register Plant
@@ -76,41 +97,54 @@
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
+                      <th>#</th>
                       <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                      <th>Scientific Name</th>
+                      <th>Classification</th>
+                      <th>Source</th>
+                      <th>Family</th>
+                      <th>Price</th>
+                      <th>Benefits</th>
+                      <th>Image</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr>
+                      <th>#</th>
                       <th>Name</th>
-                      <th>Position</th>
-                      <th>Office</th>
-                      <th>Age</th>
-                      <th>Start date</th>
-                      <th>Salary</th>
+                      <th>Scientific Name</th>
+                      <th>Classification</th>
+                      <th>Source</th>
+                      <th>Family</th>
+                      <th>Price</th>
+                      <th>Benefits</th>
+                      <th>Image</th>
+                      <th>Action</th>
                     </tr>
                   </tfoot>
                   <tbody>
+                    @foreach ($plants as $plant)
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011/04/25</td>
-                      <td>$320,800</td>
+                      <td>{{$plant->id}}</td>
+                      <td>{{$plant->name}}</td>
+                      <td><em>{{$plant->scientific_name}}</em></td>
+                      <td>{{$plant->classification}}</td>
+                      <td>{{$plant->source}}</td>
+                      <td>{{$plant->family}}</td>
+                      <td>{{$plant->price}}</td>
+                      <td>{{$plant->benefits}}</td>
+                      <td><img src="{{asset('photos/'.$plant->image)}}" alt="img-responsive" style="width:60px"></td>
+                      <td>
+                      <a href="{{action('PlantsController@edit', $plant->id)}}" class="fa fa-edit btn btn-info btn-sm"></a>
+                      <form action="{{action('PlantsController@destroy',$plant->id)}}" method="POST">
+                      @csrf
+                      <input type="hidden" name="_method" value="DELETE">
+                      <button class="btn btn-danger btn-sm fa fa-trash-alt"></button>
+                      </form>
+                      </td>
                     </tr>
-                    <tr>
-                      <td>Donna Snider</td>
-                      <td>Customer Support</td>
-                      <td>New York</td>
-                      <td>27</td>
-                      <td>2011/01/25</td>
-                      <td>$112,000</td>
-                    </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

@@ -137,13 +137,13 @@
       <!-- Diseases Remedies Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTreatment" aria-expanded="true" aria-controls="collapseTreatment">
-          <i class="fas fa-handshake"></i>
-          <span>Diseases Remedies</span>
+          <i class="fas fa-pastafarianism"></i>
+          <span>Pesticides</span>
         </a>
         <div id="collapseTreatment" class="collapse" aria-labelledby="headingTreatment" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Treatment collumn:</h6>
-            <a class="collapse-item" href="{{url('Admin/Treatments/view_treatments')}}">Seek Remedy</a>
+            <h6 class="collapse-header">Pesticides store:</h6>
+            <a class="collapse-item" href="{{url('Admin/Pesticides/view_pesticides')}}">Check Pesticide</a>
           </div>
         </div>
       </li>

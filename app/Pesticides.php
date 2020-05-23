@@ -4,15 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Fertilizers extends Model
+class Pesticides extends Model
 {
     //
-    protected $fillable =[
+    protected $fillable = [
         'name',
+        'purpose',
         'type',
-        'composition',
-        'uses',
-        'benefits',
+        'pest_controlled',
         'effects',
         'cost',
         'image',

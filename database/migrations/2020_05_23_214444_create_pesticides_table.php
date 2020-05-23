@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePlantsTable extends Migration
+class CreatePesticidesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,15 @@ class CreatePlantsTable extends Migration
      */
     public function up()
     {
-        Schema::create('plants', function (Blueprint $table) {
+        Schema::create('pesticides', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('purpose');
+            $table->string('type');
+            $table->string('pest_controlled');
+            $table->string('effects');
+            $table->string('cost');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -26,6 +33,6 @@ class CreatePlantsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('plants');
+        Schema::dropIfExists('pesticides');
     }
 }

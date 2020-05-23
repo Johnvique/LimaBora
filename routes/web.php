@@ -33,14 +33,12 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/Admin/Fertilizers/view_fertilizers', function () {
         return view('Admin/Fertilizers/view_fertilizers');
     });
-    Route::get('/Admin/Plants/view_plants', function () {
-        return view('Admin/Plants/view_plants');
-    });
+    Route::get('/Admin/Plants/view_plants', 'PlantsController@index');
     Route::get('/Admin/Tools/view_tools', function () {
         return view('Admin/Tools/view_tools');
     });
-    Route::get('/Admin/Treatments/view_treatments', function () {
-        return view('Admin/Treatments/view_treatments');
+    Route::get('/Admin/Pesticides/view_pesticides', function () {
+        return view('Admin/Pesticides/view_pesticides');
     });
     Route::get('/Admin/Roles/user_roles', function () {
         return view('Admin/Roles/user_roles');

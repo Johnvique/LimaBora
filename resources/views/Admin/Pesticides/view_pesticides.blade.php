@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-plus-square" aria-hidden="true"></i>
-            Add Treatment
+            Add pesticide
             </button>
             <button type="button" class="btn btn-success">
                 <i class="fa fa-file-excel" aria-hidden="true"></i>
@@ -24,7 +24,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title bg-lg text-black" id="exampleModalLabel">Manage Treatments</h5>
+          <h5 class="modal-title bg-lg text-black" id="exampleModalLabel">Manage Pesticides</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -53,7 +53,7 @@
                   <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address" required>
                 </div>
                 <button type="submit" class="btn btn-success btn-user btn-block">
-                  Submit Remedy
+                  Submit pesticide
                 </button>
               </form>
             </div>
@@ -69,7 +69,7 @@
           <!-- DataTales Example -->
           <div class="card shadow mb-4">
             <div class="card-header py-3 bg-success">
-              <h6 class="m-0 font-weight-bold text-white">View Treatments Here</h6>
+              <h6 class="m-0 font-weight-bold text-white">View Pesticides Here</h6>
             </div>
             <div class="card-body">
               <div class="table-responsive">

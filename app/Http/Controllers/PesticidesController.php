@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Treatments;
+use App\Pesticides;
 use Illuminate\Http\Request;
 
-class TreatmentsController extends Controller
+class PesticidesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class TreatmentsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Treatments  $treatments
+     * @param  \App\Pesticides  $pesticides
      * @return \Illuminate\Http\Response
      */
-    public function show(Treatments $treatments)
+    public function show(Pesticides $pesticides)
     {
         //
     }
@@ -52,10 +52,10 @@ class TreatmentsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Treatments  $treatments
+     * @param  \App\Pesticides  $pesticides
      * @return \Illuminate\Http\Response
      */
-    public function edit(Treatments $treatments)
+    public function edit(Pesticides $pesticides)
     {
         //
     }
@@ -64,10 +64,10 @@ class TreatmentsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Treatments  $treatments
+     * @param  \App\Pesticides  $pesticides
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Treatments $treatments)
+    public function update(Request $request, Pesticides $pesticides)
     {
         //
     }
@@ -75,10 +75,10 @@ class TreatmentsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Treatments  $treatments
+     * @param  \App\Pesticides  $pesticides
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Treatments $treatments)
+    public function destroy(Pesticides $pesticides)
     {
         //
     }

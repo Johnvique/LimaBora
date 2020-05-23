@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFarmsTable extends Migration
+class CreatePlantsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,15 @@ class CreateFarmsTable extends Migration
      */
     public function up()
     {
-        Schema::create('farms', function (Blueprint $table) {
+        Schema::create('plants', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('location');
-            $table->string('products');
-            $table->string('owner');
-            $table->string('farming_system');
-            $table->string('reports');
+            $table->string('scientific_name');
+            $table->string('classification');
+            $table->string('source');
+            $table->string('family');
+            $table->string('price');
+            $table->string('benefits');
             $table->string('image');
             $table->timestamps();
         });
@@ -33,6 +34,6 @@ class CreateFarmsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('farms');
+        Schema::dropIfExists('plants');
     }
 }
