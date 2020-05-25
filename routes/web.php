@@ -30,9 +30,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/Admin/Farms/view_farms', function () {
         return view('Admin/Farms/view_farms');
     });
-    Route::get('/Admin/Fertilizers/view_fertilizers', function () {
-        return view('Admin/Fertilizers/view_fertilizers');
-    });
+    Route::get('/Admin/Fertilizers/view_fertilizers', 'FertilizersController@index');
     Route::get('/Admin/Plants/view_plants', 'PlantsController@index');
     Route::get('/Admin/Tools/view_tools', function () {
         return view('Admin/Tools/view_tools');
